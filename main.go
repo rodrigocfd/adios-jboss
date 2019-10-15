@@ -7,8 +7,8 @@ import (
 )
 
 func main() {
-	out := runCmd("ps aux | grep jboss")
-	pids := findJbossPids(out)
+	outLines := runCmd("ps aux | grep jboss")
+	pids := findJbossPids(outLines)
 	killPids(pids)
 }
 
